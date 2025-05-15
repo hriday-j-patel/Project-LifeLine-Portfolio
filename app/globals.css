@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-barlow);
+}
+
+.industrial-border {
+  position: relative;
+}
+
+.industrial-border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: repeating-linear-gradient(45deg, #f59e0b, #f59e0b 10px, #000000 10px, #000000 20px);
+}
+
+.warning-stripe {
+  background: repeating-linear-gradient(45deg, #f59e0b, #f59e0b 10px, #000000 10px, #000000 20px);
+}
