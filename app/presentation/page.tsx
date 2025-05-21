@@ -223,7 +223,6 @@ export default function PresentationPage() {
                       <Mail className="h-5 w-5 text-blue-600 mt-0.5 mr-2 flex-shrink-0" />
                       <div>
                         <h4 className="font-bold text-gray-800 text-base">Mentor Request Email</h4>
-                        <p className="text-sm text-gray-500">From: Isaac Dupree, Hriday Patel</p>
                         <p className="text-sm text-gray-500">To: Dean Pfaendtner, NCSU College of Engineering</p>
                         <p className="text-sm text-gray-500">Date: Feb 4, 2025</p>
                         <div className="mt-3 text-sm text-gray-700 space-y-3 bg-gray-50 p-4 rounded-lg">

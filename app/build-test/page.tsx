@@ -41,7 +41,7 @@ export default function BuildTestPage() {
 
                   <div className="mt-6 space-y-8">
                     <div>
-                      <h4 className="text-lg font-semibold text-gray-800">Main Enclosure Orthographic Drawing</h4>
+                      <h4 className="text-lg font-semibold text-gray-800">Bottom Piece Orthographic Drawing</h4>
                       <div className="mt-4 flex justify-center">
                         <div className="max-w-3xl">
                           <Image
