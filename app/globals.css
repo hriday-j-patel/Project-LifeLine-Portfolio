@@ -1,3 +1,4 @@
+/* stylelint-disable */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,11 +6,38 @@
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-rgb: 255, 255, 255;
+  --staggered-delay: 0.15;
+  --staggered-opacity-duration: 0.9;
+  --staggered-translate-y: 30px;
+  --staggered-translate-y-duration: 0.7;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
+}
+
+/* Staggered Fade In Animation */
+.staggered-fade-in {
+  opacity: 0;
+  transform: translateY(var(--staggered-translate-y));
+  animation: fadeInUp var(--staggered-opacity-duration) ease-out forwards;
+  animation-delay: calc(var(--index, 0) * var(--staggered-delay, 0.15));
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* For Framer Motion fallback */
+[data-component-list*="StaggeredFadeIn"] {
+  --staggered-delay: 0.15;
+  --staggered-opacity-duration: 0.9;
+  --staggered-translate-y: 30px;
+  --staggered-translate-y-duration: 0.7;
 }
 
 h1,

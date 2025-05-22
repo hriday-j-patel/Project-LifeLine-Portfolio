@@ -1,85 +1,91 @@
-import { Lightbulb, CheckCircle, BarChart3, Search } from "lucide-react"
-import Image from "next/image"
+'use client';
 
-export default function SolutionPage() {
+import * as React from 'react';
+import { Lightbulb, CheckCircle, BarChart3, Search } from "lucide-react";
+import Image from "next/image";
+import { StaggeredFadeIn } from "../../components/staggered-fadein";
+
+function SolutionPage() {
   return (
     <main className="flex min-h-screen flex-col">
-
       {/* Header */}
       <section className="bg-gray-900 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="border-l-4 border-yellow-500 pl-4">
+          <StaggeredFadeIn className="border-l-4 border-yellow-500 pl-4">
             <h1 className="text-4xl font-bold text-white">The Solution</h1>
             <p className="mt-2 text-xl text-gray-300">Our innovative approach to construction safety</p>
-          </div>
+          </StaggeredFadeIn>
         </div>
       </section>
 
       {/* Brainstorming & Ideation */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-2xl font-bold text-gray-900 flex items-center">
-            <Lightbulb className="mr-2 h-6 w-6 text-yellow-500" />
-            Brainstorming & Ideation
-          </h2>
-
-          <div className="mt-8 grid md:grid-cols-2 gap-8">
+          <StaggeredFadeIn className="space-y-8">
             <div>
-              <p className="text-gray-700">
-                Our team explored multiple approaches to address construction safety challenges. We began with a
-                comprehensive brainstorming session to identify potential solutions that could monitor worker health and
-                environmental conditions in real-time.
-              </p>
-
-              <div className="mt-6 space-y-4">
-                <h3 className="font-bold text-gray-800">Initial Concepts:</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start">
-                    <span className="inline-flex items-center justify-center h-5 w-5 rounded-full bg-gray-200 text-gray-700 text-xs font-bold mr-2 mt-0.5">
-                      1
-                    </span>
-                    <span>Clip On Noise Cancellation Device</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="inline-flex items-center justify-center h-5 w-5 rounded-full bg-gray-200 text-gray-700 text-xs font-bold mr-2 mt-0.5">
-                      2
-                    </span>
-                    <span>Wearable Smart Timer Device</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="inline-flex items-center justify-center h-5 w-5 rounded-full bg-gray-200 text-gray-700 text-xs font-bold mr-2 mt-0.5">
-                      3
-                    </span>
-                    <span>Wearable Nutrition Monitor</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="inline-flex items-center justify-center h-5 w-5 rounded-full bg-yellow-500 text-white text-xs font-bold mr-2 mt-0.5">
-                      4
-                    </span>
-                    <span>Clip On Wearable Sensor</span>
-                  </li>
-                </ul>
-              </div>
+              <h2 className="text-2xl font-bold text-gray-900 flex items-center">
+                <Lightbulb className="mr-2 h-6 w-6 text-yellow-500" />
+                Brainstorming & Ideation
+              </h2>
             </div>
 
-            <div className="bg-gray-100 p-6 rounded-lg">
-              <h3 className="font-bold text-gray-800">Brainstorming Mind Map</h3>
-              <div className="mt-4 relative bg-white border border-gray-300 rounded-lg overflow-hidden">
-                <Image
-                  src="/images/brainstorming-mind-map.png"
-                  alt="Brainstorming mind map showing different approaches to solving worker fatigue"
-                  width={800}
-                  height={600}
-                  className="w-full h-auto"
-                />
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <p className="text-gray-700">
+                  Our team explored multiple approaches to address construction safety challenges. We began with a
+                  comprehensive brainstorming session to identify potential solutions that could monitor worker health and
+                  environmental conditions in real-time.
+                </p>
+
+                <div className="mt-6 space-y-4">
+                  <h3 className="font-bold text-gray-800">Initial Concepts:</h3>
+                  <ul className="space-y-2 text-gray-700">
+                    <li className="flex items-start">
+                      <span className="inline-flex items-center justify-center h-5 w-5 rounded-full bg-gray-200 text-gray-700 text-xs font-bold mr-2 mt-0.5">
+                        1
+                      </span>
+                      <span>Clip On Noise Cancellation Device</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="inline-flex items-center justify-center h-5 w-5 rounded-full bg-gray-200 text-gray-700 text-xs font-bold mr-2 mt-0.5">
+                        2
+                      </span>
+                      <span>Wearable Smart Timer Device</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="inline-flex items-center justify-center h-5 w-5 rounded-full bg-gray-200 text-gray-700 text-xs font-bold mr-2 mt-0.5">
+                        3
+                      </span>
+                      <span>Wearable Nutrition Monitor</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="inline-flex items-center justify-center h-5 w-5 rounded-full bg-yellow-500 text-white text-xs font-bold mr-2 mt-0.5">
+                        4
+                      </span>
+                      <span>Clip On Wearable Sensor</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="bg-gray-100 p-6 rounded-lg">
+                <h3 className="font-bold text-gray-800">Brainstorming Mind Map</h3>
+                <div className="mt-4 relative bg-white border border-gray-300 rounded-lg overflow-hidden">
+                  <Image
+                    src="/images/brainstorming-mind-map.png"
+                    alt="Brainstorming mind map showing different approaches to solving worker fatigue"
+                    width={800}
+                    height={600}
+                    className="w-full h-auto"
+                  />
+                </div>
               </div>
             </div>
-          </div>
+          </StaggeredFadeIn>
 
           {/* Concept Development */}
-          <div className="mt-12">
+          <StaggeredFadeIn className="mt-12">
             <h3 className="text-xl font-bold text-gray-900">Concept Development</h3>
-
             <div className="mt-6 grid md:grid-cols-2 gap-8">
               <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                 <h4 className="font-bold text-gray-800">Clip On Noise Cancellation Device</h4>
@@ -149,10 +155,10 @@ export default function SolutionPage() {
                 </div>
               </div>
             </div>
-          </div>
+          </StaggeredFadeIn>
 
           {/* Decision Matrix */}
-          <div className="mt-12">
+          <StaggeredFadeIn className="mt-12">
             <h3 className="text-xl font-bold text-gray-900 flex items-center">
               <BarChart3 className="mr-2 h-5 w-5 text-yellow-500" />
               Decision Matrix
@@ -230,10 +236,10 @@ export default function SolutionPage() {
                 </tbody>
               </table>
             </div>
-          </div>
+          </StaggeredFadeIn>
 
           {/* Existing Solutions */}
-          <div className="mt-12">
+          <StaggeredFadeIn className="mt-12">
             <h3 className="text-xl font-bold text-gray-900 flex items-center">
               <Search className="mr-2 h-5 w-5 text-yellow-500" />
               Current & Past Solutions
@@ -263,10 +269,10 @@ export default function SolutionPage() {
                           Not durable
                         </span>
                         <span className="inline-block bg-red-100 text-red-800 text-sm px-2 py-1 rounded m-1">
-                          Consumer-focused
+                          Only compatible with iPhones
                         </span>
                         <span className="inline-block bg-red-100 text-red-800 text-sm px-2 py-1 rounded m-1">
-                          Limited battery
+                          Expensive
                         </span>
                       </div>
                     </div>
@@ -292,13 +298,16 @@ export default function SolutionPage() {
                       <h5 className="text-sm font-semibold text-gray-700">Limitations:</h5>
                       <div className="flex flex-wrap mt-1">
                         <span className="inline-block bg-red-100 text-red-800 text-sm px-2 py-1 rounded m-1">
-                          Fragile
+                          Poor integration
                         </span>
                         <span className="inline-block bg-red-100 text-red-800 text-sm px-2 py-1 rounded m-1">
-                          No fall detection
+                          Issues with GPS accuracy
                         </span>
                         <span className="inline-block bg-red-100 text-red-800 text-sm px-2 py-1 rounded m-1">
-                          No alerts
+                          Choppy performance
+                        </span>
+                        <span className="inline-block bg-red-100 text-red-800 text-sm px-2 py-1 rounded m-1">
+                          $80 additional subscription to access data
                         </span>
                       </div>
                     </div>
@@ -326,13 +335,13 @@ export default function SolutionPage() {
                       <h5 className="text-sm font-semibold text-gray-700">Limitations:</h5>
                       <div className="flex flex-wrap mt-1">
                         <span className="inline-block bg-red-100 text-red-800 text-sm px-2 py-1 rounded m-1">
-                          No safety alerts
+                          Lack of device-on features (e.g. GPS)
                         </span>
                         <span className="inline-block bg-red-100 text-red-800 text-sm px-2 py-1 rounded m-1">
-                          No GPS
+                          Subscription-based model ($160/yr)
                         </span>
                         <span className="inline-block bg-red-100 text-red-800 text-sm px-2 py-1 rounded m-1">
-                          Not industrial
+                          Finicky strap
                         </span>
                       </div>
                     </div>
@@ -360,13 +369,13 @@ export default function SolutionPage() {
                       <h5 className="text-sm font-semibold text-gray-700">Limitations:</h5>
                       <div className="flex flex-wrap mt-1">
                         <span className="inline-block bg-red-100 text-red-800 text-sm px-2 py-1 rounded m-1">
-                          Limited health tracking
+                          Monochrome Display
                         </span>
                         <span className="inline-block bg-red-100 text-red-800 text-sm px-2 py-1 rounded m-1">
-                          Not for construction
+                          Limited smartwatch features (e.g. no touchscreen)
                         </span>
                         <span className="inline-block bg-red-100 text-red-800 text-sm px-2 py-1 rounded m-1">
-                          No dashboard
+                          Appeals to a niche market
                         </span>
                       </div>
                     </div>
@@ -374,10 +383,10 @@ export default function SolutionPage() {
                 </div>
               </div>
             </div>
-          </div>
+          </StaggeredFadeIn>
 
           {/* Final Solution */}
-          <div className="mt-12">
+          <StaggeredFadeIn className="mt-12">
             <h3 className="text-xl font-bold text-gray-900 flex items-center">
               <CheckCircle className="mr-2 h-5 w-5 text-yellow-500" />
               Final Solution: Project Lifeline
@@ -450,25 +459,25 @@ export default function SolutionPage() {
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-yellow-500 mr-2 mt-0.5 flex-shrink-0" />
                       <span className="text-base text-gray-700">
-                        Environmental sensors for temperature, humidity, and air quality
+                        Location sensors for GPS/elevation, accelerometer/gyroscope
                       </span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-yellow-500 mr-2 mt-0.5 flex-shrink-0" />
                       <span className="text-base text-gray-700">
-                        Haptic and visual alert system for dangerous conditions
+                        Emergency alert system for dangerous vital values
                       </span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-yellow-500 mr-2 mt-0.5 flex-shrink-0" />
                       <span className="text-base text-gray-700">
-                        IP68 water and dust resistance with reinforced casing
+                        Reinforced casing to withstand dust, dirt, and rain
                       </span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-yellow-500 mr-2 mt-0.5 flex-shrink-0" />
                       <span className="text-base text-gray-700">
-                        12+ hour battery life with fast charging capability
+                        5+ hour battery life with fast charging capability
                       </span>
                     </li>
                     <li className="flex items-start">
@@ -488,28 +497,30 @@ export default function SolutionPage() {
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-yellow-500 mr-2 mt-0.5 flex-shrink-0" />
                       <span className="text-base text-gray-700">
-                        Combines personal health monitoring with environmental awareness
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-yellow-500 mr-2 mt-0.5 flex-shrink-0" />
-                      <span className="text-base text-gray-700">
-                        Specifically designed for construction durability requirements
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-yellow-500 mr-2 mt-0.5 flex-shrink-0" />
-                      <span className="text-base text-gray-700">
                         Proactive alert system rather than passive protection
                       </span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-yellow-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span className="text-base text-gray-700">
+                        Designed for construction durability requirements
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-yellow-500 mr-2 mt-0.5 flex-shrink-0" />
+                      <span className="text-base text-gray-700">
+                        Affordable price point
+                        </span>
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
-          </div>
+          </StaggeredFadeIn>
         </div>
       </section>
     </main>
-  )
+  );
 }
+
+export default SolutionPage;

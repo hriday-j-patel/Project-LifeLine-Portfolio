@@ -1,11 +1,62 @@
-import Link from "next/link"
-import { HardHat, ChevronRight } from "lucide-react"
-import Image from "next/image"
+"use client";
+
+import Link from "next/link";
+import { HardHat, ChevronRight } from "lucide-react";
+import Image from "next/image";
+import { StaggeredFadeIn } from "@/components/staggered-fadein";
+
+function HeroContent() {
+  return (
+    <StaggeredFadeIn className="space-y-6">
+      <div className="inline-flex items-center px-3 py-1 rounded-full bg-black text-yellow-400 text-sm font-bold">
+        <HardHat className="mr-2 h-4 w-4" />
+        <span>CTE ADVANCED STUDIES</span>
+      </div>
+
+      <h1 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">
+        LIFELINE SYNC
+      </h1>
+
+      <p className="text-xl md:text-2xl font-bold text-white">
+        Maximize safety with a biometric wearable that works as hard as you do.
+      </p>
+
+      <div className="pt-4">
+        <Link
+          href="/problem"
+          className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-black bg-white hover:bg-gray-100 transition-colors"
+        >
+          Learn More
+          <ChevronRight className="ml-2 h-5 w-5" />
+        </Link>
+      </div>
+    </StaggeredFadeIn>
+  );
+}
+
+function HeroImage() {
+  return (
+    <StaggeredFadeIn className="bg-white p-4 rounded-lg shadow-lg border-4 border-yellow-600 relative">
+      <div className="absolute -top-3 -left-3 bg-yellow-600 text-black px-4 py-1 font-bold text-sm">
+        PROTOTYPE
+      </div>
+      <div className="aspect-square relative">
+        <Image 
+          src="/images/prototype-main.webp" 
+          alt="Project LifeLine Prototype"
+          fill
+          className="object-cover"
+          priority
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
+      </div>
+    </StaggeredFadeIn>
+  );
+}
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
-      
       {/* Hero Section */}
       <section className="relative bg-yellow-500 py-20 px-4 sm:px-6 lg:px-8">
         <div className="absolute inset-0 overflow-hidden">
@@ -14,54 +65,16 @@ export default function Home() {
         </div>
 
         <div className="relative max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div className="space-y-6">
-              <div className="inline-flex items-center px-3 py-1 rounded-full bg-black text-yellow-400 text-sm font-bold">
-                <HardHat className="mr-2 h-4 w-4" />
-                <span>CTE ADVANCED STUDIES</span>
-              </div>
-
-              <h1 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">
-                LIFELINE SYNC
-              </h1>
-
-              <p className="text-xl md:text-2xl font-bold text-white">
-                Maximize safety with a biometric wearable that works as hard as you do.
-              </p>
-
-              <div className="pt-4">
-                <Link
-                  href="/problem"
-                  className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-black bg-white hover:bg-gray-100 transition-colors"
-                >
-                  Learn More
-                  <ChevronRight className="ml-2 h-5 w-5" />
-                </Link>
-              </div>
-            </div>
-
-            <div className="bg-white p-4 rounded-lg shadow-lg border-4 border-yellow-600 relative">
-              <div className="absolute -top-3 -left-3 bg-yellow-600 text-black px-4 py-1 font-bold text-sm">
-                PROTOTYPE
-              </div>
-              <div className="aspect-square relative">
-                <Image 
-                  src="/images/prototype-main.webp" 
-                  alt="Project LifeLine Prototype"
-                  fill
-                  className="object-cover"
-                  priority
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </div>
-            </div>
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <HeroContent />
+            <HeroImage />
           </div>
 
           <div className="mt-16 border-t border-white/30 pt-8 text-white">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div>
                 <h3 className="text-sm font-bold uppercase tracking-wider">Team Members</h3>
-                <p className="mt-1">Hriday Patel and Isaac Dupree</p>
+                <p className="mt-1">Hriday Patel</p>
               </div>
               <div>
                 <h3 className="text-sm font-bold uppercase tracking-wider">Date</h3>
