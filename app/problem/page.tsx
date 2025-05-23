@@ -153,13 +153,12 @@ export default function ProblemPage() {
                 </p>
                 <p>
                   The "Fatal Four" leading causes of construction fatalities are falls, struck by object, electrocution,
-                  and caught-in/between. Many of these accidents occur due to lack of awareness of worker physical
-                  condition or environmental hazards.
+                  and caught-in/between. Many of these accidents happen due to a lack of awareness of the worker's physical
+                  condition or surrounding environmental hazards.
                 </p>
                 <p>
                   Traditional safety equipment has focused on passive protection rather than active monitoring and
-                  prevention. The integration of IoT and wearable technology presents an opportunity to revolutionize
-                  construction safety.
+                  prevention. The integration of IoT techhnology allows us to act rather than track. 
                 </p>
               </div>
             </div>
