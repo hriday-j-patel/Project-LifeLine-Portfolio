@@ -158,7 +158,7 @@ export default function ProblemPage() {
                 </p>
                 <p>
                   Traditional safety equipment has focused on passive protection rather than active monitoring and
-                  prevention. The integration of IoT techhnology allows us to act rather than track. 
+                  prevention. The integration of IoT technology allows us to act rather than track. 
                 </p>
               </div>
             </div>
