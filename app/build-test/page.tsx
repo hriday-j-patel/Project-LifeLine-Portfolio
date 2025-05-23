@@ -322,6 +322,26 @@ export default function BuildTestPage() {
 
                 <div className="mt-8">
                   <StaggeredFadeIn>
+                    <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Software Architecture</h3>
+                    <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                      <div className="flex justify-center">
+                        <div className="max-w-6xl w-full">
+                          <Image
+                            src="/images/software-architecture.jpg"
+                            alt="Software Architecture"
+                            width={1500}
+                            height={1125}
+                            className="w-full h-auto border border-gray-300 rounded-lg"
+                            priority
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </StaggeredFadeIn>
+                </div>
+
+                <div className="mt-8">
+                  <StaggeredFadeIn>
                     <h3 className="text-xl font-bold text-gray-900">Construction Process</h3>
                     <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                       <div className="bg-white rounded-lg border border-gray-300 overflow-hidden shadow-sm p-4">
