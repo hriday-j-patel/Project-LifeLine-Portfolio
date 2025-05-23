@@ -3,11 +3,10 @@
 import Link from "next/link";
 import { HardHat, ChevronRight } from "lucide-react";
 import Image from "next/image";
-import { StaggeredFadeIn } from "@/components/staggered-fadein";
 
 function HeroContent() {
   return (
-    <StaggeredFadeIn className="space-y-6">
+    <div className="space-y-6">
       <div className="inline-flex items-center px-3 py-1 rounded-full bg-black text-yellow-400 text-sm font-bold">
         <HardHat className="mr-2 h-4 w-4" />
         <span>CTE ADVANCED STUDIES</span>
@@ -30,13 +29,13 @@ function HeroContent() {
           <ChevronRight className="ml-2 h-5 w-5" />
         </Link>
       </div>
-    </StaggeredFadeIn>
+    </div>
   );
 }
 
 function HeroImage() {
   return (
-    <StaggeredFadeIn className="bg-white p-4 rounded-lg shadow-lg border-4 border-yellow-600 relative">
+    <div className="bg-white p-4 rounded-lg shadow-lg border-4 border-yellow-600 relative">
       <div className="absolute -top-3 -left-3 bg-yellow-600 text-black px-4 py-1 font-bold text-sm">
         PROTOTYPE
       </div>
@@ -50,7 +49,7 @@ function HeroImage() {
           sizes="(max-width: 768px) 100vw, 50vw"
         />
       </div>
-    </StaggeredFadeIn>
+    </div>
   );
 }
 
@@ -78,7 +77,7 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="text-sm font-bold uppercase tracking-wider">Date</h3>
-                <p className="mt-1">{new Date().toLocaleDateString()}</p>
+                <p className="mt-1">May 2025</p>
               </div>
               <div>
                 <h3 className="text-sm font-bold uppercase tracking-wider">Class</h3>
@@ -86,7 +85,7 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="text-sm font-bold uppercase tracking-wider">Project</h3>
-                <p className="mt-1">Senior Engineering Project</p>
+                <p className="mt-1">Senior Capstone Project</p>
               </div>
             </div>
           </div>
