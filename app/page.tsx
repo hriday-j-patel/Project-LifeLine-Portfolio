@@ -98,7 +98,7 @@ export default function Home() {
           <div className="border-l-4 border-yellow-500 pl-4">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900">Project Overview</h2>
             <p className="mt-4 text-lg text-gray-600">
-              Lifeline Sync+ is a biometric wearable device designed to enhance safety in construction environments.
+              Lifeline Sync is a biometric wearable device designed to enhance safety in construction environments.
               Our innovative solution monitors vital signs and environmental conditions to prevent accidents and save
               lives.
             </p>
